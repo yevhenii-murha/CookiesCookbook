@@ -71,8 +71,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CookiesRecipesApp.cs" />
+    <Compile Include="FileFormat.cs" />
+    <Compile Include="Repositories\IIngredientsRegister.cs" />
+    <Compile Include="Repositories\IngredientsRegister.cs" />
+    <Compile Include="Repositories\Strings\IStringsRepository.cs" />
+    <Compile Include="Repositories\IRecipesRepository.cs" />
+    <Compile Include="Repositories\RecipesRepository.cs" />
+    <Compile Include="Repositories\Strings\StringsJsonRepository.cs" />
+    <Compile Include="Repositories\Strings\StringsTextualRepository.cs" />
+    <Compile Include="UserInteraction\IRecipesUserInteraction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInteraction\RecipesConsoleUserInteraction.cs" />
     <Compile Include="Recipes\Ingredients\Butter.cs" />
     <Compile Include="Recipes\Ingredients\Cardamom.cs" />
     <Compile Include="Recipes\Ingredients\Chocolate.cs" />
@@ -88,5 +99,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
