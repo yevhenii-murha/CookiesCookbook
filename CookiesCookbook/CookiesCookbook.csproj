@@ -71,8 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CookiesRecipesApp.cs" />
-    <Compile Include="FileFormat.cs" />
+    <Compile Include="App\CookiesRecipesApp.cs" />
+    <Compile Include="Services\FileFormat.cs" />
     <Compile Include="Repositories\IIngredientsRegister.cs" />
     <Compile Include="Repositories\IngredientsRegister.cs" />
     <Compile Include="Repositories\Strings\IStringsRepository.cs" />
@@ -80,6 +80,8 @@
     <Compile Include="Repositories\RecipesRepository.cs" />
     <Compile Include="Repositories\Strings\StringsJsonRepository.cs" />
     <Compile Include="Repositories\Strings\StringsTextualRepository.cs" />
+    <Compile Include="Services\FileMetadata.cs" />
+    <Compile Include="Services\StringsRepositoryFactory.cs" />
     <Compile Include="UserInteraction\IRecipesUserInteraction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

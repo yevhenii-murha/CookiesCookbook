@@ -4,7 +4,7 @@ using CookiesCookbook.UserInteraction;
 using System;
 using System.Linq;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.App
 {
     public class CookiesRecipesApp
     {

@@ -1,5 +1,7 @@
-﻿using CookiesCookbook.Repositories;
+﻿using CookiesCookbook.App;
+using CookiesCookbook.Repositories;
 using CookiesCookbook.Repositories.Strings;
+using CookiesCookbook.Services;
 using CookiesCookbook.UserInteraction;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,25 +12,12 @@ namespace CookiesCookbook
     {
         static void Main(string[] args)
         {
-            /////////////////////////////////////////
-            const FileFormat Format = FileFormat.Txt;
-            const string FileName = "recipes";
-            /////////////////////////////////////////
+            var fileMetadata = new FileMetadata(FileFormat.Txt, "recipes");
 
-            /////////////////////////////////////////
-            string filePath;
-            IStringsRepository stringsRepository;
-            if (Format == FileFormat.Json)
-            {
-                filePath = FileName + ".json";
-                stringsRepository = new StringsJsonRepository();
-            }
-            else if (Format == FileFormat.Txt)
-            {
-                filePath = FileName + ".txt";
-                stringsRepository = new StringsTextualRepository();
-            }
-            
+            string filePath = fileMetadata.FilePath;
+
+            IStringsRepository stringsRepository = StringsRepositoryFactory.CreateRepository(fileMetadata.Format);
+
             var ingredientsRegister = new IngredientsRegister();
             var cookiesRecipesApp = new CookiesRecipesApp(
                 new RecipesRepository(
